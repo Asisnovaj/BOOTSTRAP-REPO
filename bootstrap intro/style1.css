@@ -1,0 +1,12 @@
+body {
+    background-color: blue;
+    color: aqua;
+}
+
+div {
+    background-color: azure;
+}
+
+.p50 {
+    padding: 50px;
+}
