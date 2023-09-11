@@ -1,12 +1,167 @@
-body {
-    background-color: blue;
-    color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-div {
-    background-color: azure;
+nav {
+
+    box-shadow: 0px 5px 0px rgb(39, 38, 38, .5);
+
 }
 
-.p50 {
-    padding: 50px;
+.navbar-brand {
+    font-weight: 600;
+}
+
+.nav-link {
+    color: white !important;
+    border-bottom: 1px solid transparent;
+}
+
+.nav-link:hover {
+    color: white !important;
+    border-bottom: 1px solid white;
+}
+
+section {
+    width: 100;
+    height: 100vh;
+}
+
+#home {
+    margin-top: 60px;
+    width: 100;
+    height: 100vh;
+    background: linear-gradient(pink, white);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#home p {
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    opacity: 0;
+    animation: text 5s infinite;
+
+
+}
+
+#home p:nth-child(1) {
+    animation-delay: 3s;
+}
+
+#home p:nth-child(2) {
+    animation-delay: 5s;
+}
+
+
+@keyframes text {
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* @media screen and(max-width:576px) {
+    #home p {
+        font-size: 20px;
+    }
+} */
+
+#home span {
+    color: blue;
+}
+
+/* about */
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(41, 136, 173);
+}
+
+.circle {
+    width: 500px;
+    height: 500px;
+    background: greenyellow;
+    border-radius: 500%;
+    position: relative;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, .7);
+    margin-top: 3%;
+    margin-bottom: 8%;
+    transition: 1s;
+
+
+}
+
+/* .circle img {
+    position: absolute;
+    height: 150px;
+    top: 5%;
+    margin-left: 200px;
+} */
+.circle:hover {
+    width: 700px;
+    height: 500px;
+    border-radius: 10px;
+    transition: 1s;
+    opacity: 1;
+}
+
+.circle:hover .content {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    width: 50%;
+    opacity: 1;
+    transition: 3s;
+}
+
+.circle:hover .content {
+    opacity: 0;
+}
+
+/* skill section */
+#skills {
+    padding-top: 5%;
+    background: rgb(230, 108, 21);
+}
+
+#skills .container {
+    margin-top: 100%;
+    margin-bottom: 100%;
+}
+
+label {
+    font-size: 20px;
+}
+
+.progress {
+    height: 30px !important;
+    box-shadow: 2px 4px 5px black;
+
+}
+
+.progress:hover {
+    box-shadow: 2px 4px 5px rgb(252, 251, 251);
+
+}
+
+/* project section */
+.c-item {
+    height: 300px;
+}
+
+.c.img {
+    height: 100%;
+    object-fit: cover;
 }
